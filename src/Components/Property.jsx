@@ -1,9 +1,15 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import PropertyDetail from "../Detail/PropertyyDetail";
 import "../CSS/Property.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Property() {
   const [detail, setDetail] = useState(PropertyDetail);
+
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
 
   return (
     <Fragment>
@@ -19,7 +25,9 @@ function Property() {
                 <div className="single-property">
                   <div className="card">
                     <div className="property-thumb">
-                      <div className="property-tag">For Sale</div>
+                      <div className="property-tag" data-aos="fade-down">
+                        For Sale
+                      </div>
                       <img src={detail.Image} alt="palace" />
 
                       <div className="property-content">
@@ -31,7 +39,7 @@ function Property() {
                         <span className="amout">{detail.amount}</span>
                       </div>
 
-                      <div className="property-footer">
+                      <div className="property-footer" data-aos="fade-up">
                         <ul>
                           <li>
                             <span>{detail.size}</span>
@@ -52,12 +60,11 @@ function Property() {
               </div>
             );
           })}
-
-          <div className="more-property">
-            <a href="#!" className="property-btn">
-              More Properties
-            </a>
-          </div>
+        </div>
+        <div className="more-property">
+          <a href="#!" className="property-btn">
+            More Properties
+          </a>
         </div>
       </section>
     </Fragment>

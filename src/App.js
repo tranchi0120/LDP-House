@@ -23,9 +23,6 @@ function App() {
       <Counter />
       <Agents />
       <Footer />
-
-
-
     </Fragment>
   );
 }

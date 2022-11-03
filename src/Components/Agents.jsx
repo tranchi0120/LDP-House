@@ -33,7 +33,6 @@ const Agents = () => {
                         </li>
                         <li>
                           <a href="#">
-                            {" "}
                             <i class="fa-brands fa-instagram"></i>{" "}
                           </a>
                         </li>

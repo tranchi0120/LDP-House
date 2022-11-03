@@ -1,11 +1,16 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import "../CSS/Home.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Home = () => {
+  useEffect(() => {
+    AOS.init({ duration: 5000 });
+  }, []);
   return (
     <Fragment>
       <section className="home">
-        <div className="container">
+        <div className="container" data-aos="fade-right">
           <h1>
             We construct <br /> dreams
           </h1>
