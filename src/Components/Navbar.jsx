@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className={showMenu ? "menu mobile-menu" : "menu"}>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="#!">Home</a>
             </li>
             <li>
               <a href="#!">Blog</a>

@@ -36,7 +36,7 @@ nav h1 span {
   letter-spacing: 0.5px;
 }
 .menu ul li a:hover {
-  color: rgb(14, 12, 12);
+  color: #fdae5c;
 }
 .btn {
   background: #fdae5c;
